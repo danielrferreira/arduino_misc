@@ -1,9 +1,8 @@
-//This is a simple drawning in a 128x64 OLED display
+//This is a simple house drawning in a 128x64 OLED display
 
 #include <U8glib.h>
  
 U8GLIB_SH1106_128X64  tela_led(U8G_I2C_OPT_NONE); 
-
 
 void u8g_prepare() {
   tela_led.setFont(u8g_font_6x10);
@@ -35,8 +34,6 @@ void draw(){
   tela_led.drawLine(19,35,19,39); //circle window
   tela_led.drawLine(17,37,21,37); //circle window
 
-  
-
   tela_led.drawCircle(37,40,11,U8G_DRAW_LOWER_RIGHT); //window skirts
   tela_led.drawCircle(68,40,11,U8G_DRAW_LOWER_LEFT); //window skirts
 
@@ -66,8 +63,6 @@ void draw(){
   tela_led.drawLine(85,23,83,25); //sun light
 
 }
-
-
 
 void setup() {
 
