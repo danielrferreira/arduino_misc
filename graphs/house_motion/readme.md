@@ -4,4 +4,8 @@
 - 128x64 OLED Display
 
 ## Comments
-Smoke was animated using 8 steps, so I can use simple bitwise operators to animate the sun/moon
+This code was created to train bitwise operators, the following operators and counters were used:
+- count: range 0-127
+- chimmey smoke animation: count&7 to range 0-7
+- sun and moon motion: count>>5 to identify the stage and count&31 to range 0-31
+- stars fade in and out: (count&31)>>3 to identify the 4 stages of fade (maybe 8 stages would be smoother)
